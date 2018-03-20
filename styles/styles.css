@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	background-color: #1e1b1b;
+}
+
+#app {
+	text-align: center;
+	margin-top: 10px;
+	background-color: gray;
+	color: #fff;
+}
+
+button {
+	width: 50px;
+	height: 50px;
+	margin: 0 10px 0 10px;
+	font-size: 20px;
+	color: #fff;
+}
+
+button:hover {
+	background-color: green;
+	font-size: 40px;
+}
+
+span {
+	font-size: 300%;
+}
