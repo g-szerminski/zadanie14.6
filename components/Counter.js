@@ -17,6 +17,14 @@ var Counter = React.createClass({
         });
     },
 
+    render: function() {
+        return React.createElement('div', {},
+            React.createElement('button', {onClick: this.decrement}, '-'),
+            React.createElement('span', {}, 'Licznik ' + this.state.counter),
+            React.createElement('button', {onClick: this.increment}, '+')
+        );
+    },
+
     componentWillMount: function() {
     console.log('Przed utworzeniem komponentu');
     },
@@ -26,24 +34,18 @@ var Counter = React.createClass({
     },
 
     componentWillUpdate: function(nextProps, nextState) {
-    
     console.log('Aktualny stan licznika: ' + nextState.counter);
-
     },
 
     componentDidUpdate: function(prevProps, prevState) {
-   
     console.log('Poprzednia stan licznika: ' + prevState.counter);
-    },
-
-    render: function() {
-        return React.createElement('div', {},
-            React.createElement('button', {onClick: this.decrement}, '-'),
-            React.createElement('span', {}, 'Licznik ' + this.state.counter),
-            React.createElement('button', {onClick: this.increment}, '+')
-        );
-    }    
+    }
 });
 
-var element = React.createElement(Counter);
+var element = React.createElement('div', {},
+    React.createElement(Counter),
+    React.createElement(Counter),
+    React.createElement(Counter)
+);
+
 ReactDOM.render(element, document.getElementById('app'));
